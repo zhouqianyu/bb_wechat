@@ -11,6 +11,11 @@ class IndexController extends Controller
 {
     public function index()
     {
+        if (isset($_GET['code'])){
+            $res = $this->getOpenId($_GET['code']);
+            setcookie('userId',$res,7200,'/');
+            $_COOKIE['userId'] = $res;
+        }
         if (User::where('user_id', $_COOKIE['userId'])->count() === 0)
             User::create([
                 'user_id' => $_COOKIE['userId'],

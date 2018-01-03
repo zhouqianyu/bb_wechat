@@ -46,26 +46,24 @@
     </div>
 </div>
 <div class="bottom">
-    <div class="current" id="index">
+    <div class="current" id="index" onclick="indexPage()">
         <i class="iconfont">&#xe603;</i>
         <a>首页</a>
     </div>
     <div id="sort">
-        <i class="iconfont">&#xe604;</i>
+        <i class="iconfont" onclick="sort()">&#xe604;</i>
         <a>分类</a>
     </div>
     <div id="cart">
-        <i class="iconfont">&#xe70e;</i>
+        <i class="iconfont" onclick="cart()">&#xe70e;</i>
         <a>购物车</a>
     </div>
     <div id="me">
-        <i class="iconfont">&#xe644;</i>
+        <i class="iconfont" onclick="me()">&#xe644;</i>
         <a>我的</a>
     </div>
 </div>
 </body>
-<script src="js/bottom.js"></script>
-<script src="js/slider.js"></script>
 <script>
     function detail(obj) {
         let id = obj.getAttribute('key');
@@ -73,6 +71,21 @@
     }
     function toSearch() {
         window.location.href = '/bb_wechat/public/search/view';
+    }
+    function indexPage() {
+        window.location.href = '/bb_wechat/public/index?sheet=1';
+    }
+
+    function sort() {
+        window.location.href = '/bb_wechat/public/index?sheet=2';
+    }
+
+    function cart() {
+        window.location.href = '/bb_wechat/public/index?sheet=3';
+    }
+
+    function me() {
+        window.location.href = '/bb_wechat/public/index?sheet=4';
     }
 </script>
 </html>
