@@ -27,10 +27,11 @@
                 .then(function (res) {
                     let data = res.data;
                     if (data.code === 200) {
-                        let children = main.childNodes;
-                        children.forEach(function (item) {
-                            main.removeChild(item);
-                        });
+                        const childrens = main.children;
+                        const length = childrens.length;
+                        for(var i = 0;i<length;i++){
+                            main.removeChild(childrens[0]);
+                        }
                         data.data.forEach(function (item) {
                             let div = document.createElement('div');
                             div.className = 'mainItem';
@@ -44,10 +45,11 @@
                     }
                 });
         else {
-            let children = main.childNodes;
-            children.forEach(function (item) {
-                main.removeChild(item);
-            });
+            const childrens = main.children;
+            const length = childrens.length;
+            for(var i = 0;i<length;i++){
+                main.removeChild(childrens[0]);
+            }
         }
     }
     function toIndex() {

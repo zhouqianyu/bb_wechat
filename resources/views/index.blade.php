@@ -88,4 +88,5 @@
         window.location.href = '/bb_wechat/public/index?sheet=4';
     }
 </script>
+<script src="{{URL::asset('js/slider.js')}}"></script>
 </html>
