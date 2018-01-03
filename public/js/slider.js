@@ -11,7 +11,6 @@ function animate(offest){
 }
 
 function play () {
-    alert('----');
     let timer;
     timer = setInterval(function () {
         index ++;
