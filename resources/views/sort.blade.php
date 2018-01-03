@@ -64,16 +64,15 @@
     });
     function addCart(obj) {
         let id = obj.getAttribute('key');
-//        console.log(obj);
         let params = new URLSearchParams();
         params.append('bookId',id);
         axios.post('/bb_wechat/public/cart/add',params);
     }
     let mainItems = document.getElementsByClassName('mainItem');
-    for(let item of mainItems) {
-        item.onclick = function (e) {
+    for(let i = 0; i<mainItems.length;i++) {
+        mainItems[i].onclick = function (e) {
             if(e.target.className != 'iconfont rightIcon') {
-                console.log(e.target);
+                window.location.href = '/bb_wechat/public/detail?id=' + mainItems[i].getAttribute('key');
             }
         }
     }
