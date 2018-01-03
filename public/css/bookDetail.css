@@ -10,6 +10,7 @@ body, html {
 .backBtn {
     position: absolute;
     left: 1rem;
+    top: 1rem;
     color: gray;
 }
 .main {
@@ -19,6 +20,7 @@ body, html {
     padding-top: 27px;
     background-color: white;
     height: 430px;
+    position: relative;
 }
 
 .bookDetailImg {

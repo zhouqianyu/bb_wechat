@@ -67,11 +67,13 @@ body, html {
     position: absolute;
     right: 1rem;
     color: gray;
+    top:17px;
 }
 .rightText {
     position: absolute;
     right: calc(1rem + 20px);
     color: gray;
+    top: 17px;
 }
 .myOrderBottom {
     display: flex;
