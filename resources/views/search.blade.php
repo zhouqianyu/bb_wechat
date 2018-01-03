@@ -18,7 +18,7 @@
 </div>
 </body>
 <script>
-    let main = document.getElementById('main');
+    let main = document.getElementsByClassName('main')[0];
 
     function search(obj) {
         let hint = obj.value;

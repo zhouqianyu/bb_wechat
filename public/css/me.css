@@ -73,7 +73,7 @@ body, html {
     position: absolute;
     right: calc(1rem + 20px);
     color: gray;
-    top: 17px;
+    top: 16px;
 }
 .myOrderBottom {
     display: flex;

@@ -14,12 +14,13 @@ body, html {
 .header input {
     width: 80%;
     margin-left: 1rem;
-    /*height: 20px;*/
+    height: 20px;
     outline: none;
 }
 .cancelText {
     position: absolute;
     right: 1rem;
+    top: 1rem;
     font-size: 15px;
 }
 .main {
