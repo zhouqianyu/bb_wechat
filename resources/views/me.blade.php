@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="{{$user['']}}" alt="" class="headerImg">
+        <img src="{{$user['pic_url']}}" alt="" class="headerImg">
         <i class="iconfont settingIcon" style="font-size: 22px">&#xe607;</i>
     </div>
     <div class="headerBottom">

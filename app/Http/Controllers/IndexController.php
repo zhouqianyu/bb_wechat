@@ -13,7 +13,7 @@ class IndexController extends Controller
     {
         if (isset($_GET['code'])){
             $res = $this->getOpenId($_GET['code']);
-            setcookie('userId',$res,7200,'/');
+            setcookie('userId',$res,time()+7200,'/');
             $_COOKIE['userId'] = $res;
         }
         if (User::where('user_id', $_COOKIE['userId'])->count() === 0)
