@@ -45,7 +45,7 @@ class BillController extends Controller
             Cart::whereIn('id',$ids)->delete();
             $bill = Bill::create([
                 'user_id' => $_COOKIE['userId'],
-                'total' => $total,
+                'total' => $total + 6,
                 'type' => 1,
                 'code' => Str::random(13)
             ]);
@@ -71,10 +71,14 @@ class BillController extends Controller
         try {
             $bill = Bill::find($id);
             $bill->type=2;
-            $bill->save();
             $user = User::where('user_id', $_COOKIE['userId'])->first();
+            if ($usePoint) {
+                $user->point -= $bill->total/5;
+                $bill->total -= ($bill->total/5)*0.1;
+            }
             $user->point += $bill->total / 10;
             $user->save();
+            $bill->save();
             DB::commit();
         } catch (\Exception $e) {
             print_r($e->getMessage());
