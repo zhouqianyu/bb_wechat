@@ -35,9 +35,9 @@
         <div class="point">
             <div>
                 <span>积分抵扣</span>
-                <span>此单可抵<span id="needPoint">{{floor($data['total']/10)}}</span>,账户积分{{$point}}</span>
+                <span>此单可抵<span id="point">{{floor($data['total']/5)}}</span>,账户积分{{$point}}</span>
             </div>
-            <input type="checkbox" class="checkPoint" id="checkPoint">
+            <input type="checkbox" class="checkPoint" id="checkPoint"/>
         </div>
         <div class="remark">
             <span class="remarkSpan">订单备注</span>
@@ -56,10 +56,9 @@
 </body>
 <script>
     window.localStorage.setItem('id','{{$data['id']}}');
-    let point = document.getElementById('checkPoint');
-    let needPoint = parseInt(document.getElementById('needPoint').innerHTML);
-    {{--if (needPoint > '{{$point}}' || needPoint === 0) point.checked = true;--}}
+    disable();
     function pay() {
+        let point = document.getElementById('checkPoint');
         let id = window.localStorage.getItem('id');
         let params = new URLSearchParams();
         params.append('id',id);
@@ -72,6 +71,11 @@
     }
     function toAddress() {
         window.location.href = '/bb_wechat/public/choiceAddress'
+    }
+    function disable() {
+        let point = document.getElementById('checkPoint');
+        if (parseInt({{floor($data['total']/5)}}) > parseInt({{$point}}) ) point.disabled = true;
+
     }
 </script>
 </html>
