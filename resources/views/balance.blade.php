@@ -56,9 +56,6 @@
 </body>
 <script>
     window.localStorage.setItem('id','{{$data['id']}}');
-    let point = document.getElementById('checkPoint');
-    let needPoint = parseInt(document.getElementById('needPoint').innerHTML);
-    if (needPoint > {{$point}} || needPoint === 0) point.disabled = true;
     function pay() {
         let id = window.localStorage.getItem('id');
         let params = new URLSearchParams();

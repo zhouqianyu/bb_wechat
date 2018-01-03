@@ -39,9 +39,11 @@ class Controller extends BaseController
         $output = curl_exec($ch);
         $res2 = json_decode($output,true);
         if (isset($res2['headimgurl'])){
-            User::create([
+            User::updateOrCreate([
                 'pic_url'=>$res2['headimgurl'],
                 'user_id'=>$res2['openid']
+            ],[
+                'pic_url'=>$res2['headimgurl']
             ]);
         }
         return $res2['openid'];
