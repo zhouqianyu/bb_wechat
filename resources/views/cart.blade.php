@@ -91,16 +91,18 @@
         totalSpan.innerHTML = checked?'{{$total}}':0;
     }
     function toPay() {
-        let idsArr = toArray(ids);
-        let params = new URLSearchParams();
-        params.append('ids',idsArr);
-        axios.post('/bb_wechat/public/toPay',params)
-            .then(function (res) {
-                let data=res.data;
-                if (data.code===200){
-                    window.location.href = '/bb_wechat/public/waitPay?id='+data.data;
-                }
-            })
+        if (ids.size>0) {
+            let idsArr = toArray(ids);
+            let params = new URLSearchParams();
+            params.append('ids', idsArr);
+            axios.post('/bb_wechat/public/toPay', params)
+                .then(function (res) {
+                    let data = res.data;
+                    if (data.code === 200) {
+                        window.location.href = '/bb_wechat/public/waitPay?id=' + data.data;
+                    }
+                })
+        }
     }
     function toArray(set) {
         let idsArr = '';
@@ -112,14 +114,16 @@
     }
     function deleteCart() {
         let params = new URLSearchParams();
-        let idsArr = toArray(ids);
-        params.append('ids',idsArr);
-        axios.post('/bb_wechat/public/cart/delete',params)
-            .then(function (res) {
-                if(res.data.code===200){
-                    window.location.href = '/bb_wechat/public/index?sheet=3'
-                }
-            })
+        if (ids.size>0) {
+            let idsArr = toArray(ids);
+            params.append('ids', idsArr);
+            axios.post('/bb_wechat/public/cart/delete', params)
+                .then(function (res) {
+                    if (res.data.code === 200) {
+                        window.location.href = '/bb_wechat/public/index?sheet=3'
+                    }
+                })
+        }
     }
     function indexPage() {
         window.location.href = '/bb_wechat/public/index?sheet=1';

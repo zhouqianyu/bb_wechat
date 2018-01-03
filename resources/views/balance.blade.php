@@ -47,7 +47,7 @@
             <span>共{{$amount}}件商品，商品总价￥{{$data['total']}}</span>
         </div>
         <div class="transMoney">
-            <span>运费￥6</span>
+            <span>其中运费￥6</span>
         </div>
     </div>
     <div class="bottom" onclick="pay()">

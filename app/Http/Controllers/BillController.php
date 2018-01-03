@@ -45,7 +45,7 @@ class BillController extends Controller
             Cart::whereIn('id',$ids)->delete();
             $bill = Bill::create([
                 'user_id' => $_COOKIE['userId'],
-                'total' => $total,
+                'total' => $total + 6,
                 'type' => 1,
                 'code' => Str::random(13)
             ]);
