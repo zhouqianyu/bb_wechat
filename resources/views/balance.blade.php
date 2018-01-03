@@ -58,11 +58,12 @@
     window.localStorage.setItem('id','{{$data['id']}}');
     let point = document.getElementById('checkPoint');
     let needPoint = parseInt(document.getElementById('needPoint').innerHTML);
-    if (needPoint > {{$point}} || needPoint === 0) point.disabled = true;
+    {{--if (needPoint > '{{$point}}' || needPoint === 0) point.checked = true;--}}
     function pay() {
         let id = window.localStorage.getItem('id');
         let params = new URLSearchParams();
         params.append('id',id);
+        params.append('usePoint',point.checked);
         axios.post('/bb_wechat/public/pay',params)
             .then(function () {
                 window.localStorage.removeItem('id');

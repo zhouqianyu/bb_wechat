@@ -66,6 +66,7 @@ class BillController extends Controller
     public function pay()
     {
         $id = $_POST['id'];
+        $usePoint = $_POST['usePoint'];
         DB::beginTransaction();
         try {
             $bill = Bill::find($id);

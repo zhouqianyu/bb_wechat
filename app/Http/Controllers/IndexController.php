@@ -40,10 +40,10 @@ class IndexController extends Controller
             return view('cart', ['total' => $total, 'data' => $carts]);
         } elseif ($sheet === 4) {
             $user = User::where('user_id', $_COOKIE['userId'])->first()->toArray();
-            $waitPay = Bill::where('type', 1)->count();
-            $waitSend = Bill::where('type', 2)->count();
-            $waitReceive = Bill::where('type', 3)->count();
-            $waitBack = Bill::where('type',4)->count();
+            $waitPay = Bill::where('user_id', $_COOKIE['userId'])->where('type', 1)->count();
+            $waitSend = Bill::where('user_id', $_COOKIE['userId'])->where('type', 2)->count();
+            $waitReceive = Bill::where('user_id', $_COOKIE['userId'])->where('type', 3)->count();
+            $waitBack = Bill::where('user_id', $_COOKIE['userId'])->where('type',4)->count();
             $collect = User::where('user_id', $_COOKIE['userId'])->first()->books()->count();
             return view('me', ['waitPay' => $waitPay, 'waitSend' => $waitSend, 'waitReceive' => $waitReceive, 'waitBack'=>$waitBack,'collect' => $collect, 'user' => $user]);
         }
