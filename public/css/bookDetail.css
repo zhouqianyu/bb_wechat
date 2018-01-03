@@ -1,0 +1,74 @@
+::-webkit-scrollbar{width:0}
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+.backBtn {
+    position: absolute;
+    left: 1rem;
+    color: gray;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 27px;
+    background-color: white;
+    height: 430px;
+}
+
+.bookDetailImg {
+    width: 287px;
+    height: 302px;
+}
+.bookDetailCenter {
+    width: 100%;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    margin: 10px 0;
+}
+.bookDetailCenter span {
+    padding: 10px 0 0 10px;
+}
+.money {
+    color: #ef7575;
+}
+.bookDetailBottom {
+    width: 100%;
+    height: 69px;
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.bookDetailBottom span {
+    width: 33%;
+    text-align: center;
+}
+.bottom {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    /*border-top: 1px solid #dedddd;*/
+    background-color: white;
+}
+.bottom div {
+    width: 100px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

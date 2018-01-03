@@ -1,0 +1,140 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.header {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #dedddd;
+    border-bottom: 1px solid #dedddd;
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.headerCenter {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.receiveAddress {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 263px;
+}
+.rightArrow {
+    position: absolute;
+    right: 1rem;
+}
+.main {
+    margin-top: 20px;
+}
+.mainItem {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    border-bottom: 1px solid #dedddd;
+}
+.mainItemImg {
+    width: 107px;
+    height: 109px;
+    padding-left: 1rem;
+}
+.mainItemCenter {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.money {
+    color: #ef7575;
+    margin-top: 10px;
+}
+.bookNums {
+    position: absolute;
+    right: 1rem;
+}
+.mainBottom {
+    margin-top: 15px;
+}
+.point{
+    width: 100%;
+    height: 58px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid #dedddd;
+}
+.point div {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-left: 1.5rem;
+}
+.checkPoint {
+    position: absolute;
+    right: 1.5rem;
+}
+.remark {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #dedddd;
+}
+.remark input {
+    outline: none;
+    border: none;
+    margin-left: 10px;
+}
+.remarkSpan {
+    margin-left: 1.5rem;
+    margin-right: 10px;
+}
+.totalMoney {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #dedddd;
+}
+.totalMoney span, .transMoney span {
+    position: absolute;
+    right: 1rem;
+    font-size: 14px;
+}
+.transMoney {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+}
+.bottom {
+    width: 100%;
+    height: 50px;
+    background-color: #ef7575;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

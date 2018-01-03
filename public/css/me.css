@@ -1,0 +1,107 @@
+::-webkit-scrollbar{width:0}
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+.header {
+    width: 100%;
+    height: 180px;
+    background-color: #527b9cf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.headerImg {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+}
+.settingIcon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: white;
+}
+.headerBottom {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.headerBottom  div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+.headerBottomLeft {
+    border-right: 1px solid #dedddd;
+}
+.number {
+    color: #ef7575;
+}
+.myOrderTop {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #dedddd;
+    border-bottom: 1px solid #dedddd;
+    margin-top: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.myOrderTopLeft {
+    padding-left: 1rem;
+}
+.rightArrow {
+    position: absolute;
+    right: 1rem;
+    color: gray;
+}
+.rightText {
+    position: absolute;
+    right: calc(1rem + 20px);
+    color: gray;
+}
+.myOrderBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 88px;
+}
+.myOrderBottom div{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.myOrderBottom div i {
+    color: #4eb4e2;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+.nums {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ef7575;
+    color: white;
+    position: absolute;
+    right: 25%;
+    top: -10px;
+    text-align: center;
+}
