@@ -89,4 +89,7 @@
     }
 </script>
 <script src="{{URL::asset('js/slider.js')}}"></script>
+<script>
+    play();
+</script>
 </html>
