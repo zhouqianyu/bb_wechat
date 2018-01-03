@@ -18,9 +18,8 @@
 </div>
 </body>
 <script>
-    let main = document.getElementsByClassName('main')[0];
-
     function search(obj) {
+        let main = document.getElementsByClassName('main')[0];
         let hint = obj.value;
         if (hint != '')
             axios.get('/bb_wechat/public/search?hint=' + hint)
