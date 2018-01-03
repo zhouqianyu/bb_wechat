@@ -1,18 +1,21 @@
-let list = document.getElementById('list');
-let buttonItems = document.getElementById('buttons').getElementsByTagName('span');
 let index = 1;
 let timer;
 
 
-animate = (offest) => {
+function animate(offest){
+    let list = document.getElementById('list');
+
     let newLeft = list.style.left + offest;
     list.style.left = newLeft + 'px';
     if (index >= 1) {
         list.style.left = -419 * (index - 1) + 'px';
     }
-};
+}
 
-play = () => {
+function play () {
+    let list = document.getElementById('list');
+    alert('-plau');
+    let buttonItems = document.getElementById('buttons').getElementsByTagName('span');
     timer = setInterval(function () {
         index ++;
         if(index > 3) {
@@ -21,14 +24,18 @@ play = () => {
         animate(0);
         buttonShow();
     }, 2000);
-};
+}
 
-buttonShow = () => {
+function buttonShow () {
+    let buttonItems = document.getElementById('buttons').getElementsByTagName('span');
     for (let i = 0; i < buttonItems.length; i++) {
         if (buttonItems[i].className === "on") {
             buttonItems[i].className = "";
         }
     }
     buttonItems[index - 1].className = "on";
-};
+}
+
 play();
+
+

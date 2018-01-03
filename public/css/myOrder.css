@@ -52,12 +52,12 @@ body, html {
     position: relative;
 }
 .mainItemWaitPay {
-    height: 293px;
+    /*height: 293px;*/
     margin-bottom: 10px;
     position: relative;
 }
 .mainItemWaitSend {
-    height: 241px;
+    /*height: 241px;*/
     position: relative;
     margin-bottom: 10px;
 }
