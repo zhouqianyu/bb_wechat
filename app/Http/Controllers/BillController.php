@@ -72,7 +72,7 @@ class BillController extends Controller
             $bill = Bill::find($id);
             $bill->type=2;
             $user = User::where('user_id', $_COOKIE['userId'])->first();
-            if ($usePoint) {
+            if ($usePoint === 'true') {
                 $user->point -= $bill->total/5;
                 $bill->total -= ($bill->total/5)*0.1;
             }

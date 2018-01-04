@@ -23,7 +23,7 @@
     <div class="mainItemWaitReceive">
         <div class="mainTop">
             <span class="mainTopLeft">订单号: {{$v['code']}}</span>
-            <span class="rightStatus">申请售后中</span>
+            <span class="rightStatus">等待收货中</span>
         </div>
         @foreach($v['books'] as $book)
             <div class="mainCenter">

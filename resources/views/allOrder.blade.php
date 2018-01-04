@@ -21,7 +21,7 @@
         <div class="@switch($v['type']) @case(1)mainItemWaitPay @break @case(2)mainItemWaitSend @break @case(3)mainItemWaitReceive @break @case(4)mainItemWaitSend @case(5)mainItemWaitSend @endswitch">
             <div class="mainTop">
                 <span class="mainTopLeft">订单号: {{$v['code']}}</span>
-                <span class="rightStatus">@switch($v['type']) @case(1)等待付款 @break @case(2)买家已付款 @break @case(3)卖家已发货 @case(4)售后申请中 @break @case(5) 已取消@endswitch</span>
+                <span class="rightStatus">@switch($v['type']) @case(1)等待付款 @break @case(2)买家已付款 @break @case(3)卖家已发货 @break @case(4)售后申请中 @break @case(5) 已取消@endswitch</span>
             </div>
             @foreach($v['books'] as $book)
             <div class="mainCenter">
